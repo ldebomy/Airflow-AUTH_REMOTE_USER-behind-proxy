@@ -17,10 +17,10 @@ FAB_SECURITY_MANAGER_CLASS = 'customsecurity.CustomAirflowSecurityManager'
   CustomLog /var/log/apache2/airflow_access.log combined
   SSLEngine on
   SSLCipherSuite ALL:!aNULL:!ADH:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM:+SSLv3
-  SSLCertificateFile /etc/letsencrypt/live/recb.fr/cert.pem
-  SSLCertificateKeyFile /etc/letsencrypt/live/recb.fr/privkey.pem
-  SSLCertificateChainFile /etc/letsencrypt/live/recb.fr/fullchain.pem
-  SSLCACertificateFile /etc/letsencrypt/live/recb.fr/chain.pem
+  SSLCertificateFile /etc/apache2/cert.pem
+  SSLCertificateKeyFile /etc/apache2/privkey.pem
+  SSLCertificateChainFile /etc/apache2/fullchain.pem
+  SSLCACertificateFile /etc/apache2/chain.pem
   <Proxy *>
      AllowOverride None
      AuthType GSSAPI
